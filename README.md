@@ -116,7 +116,7 @@ uname -rs to verify if the kernel is loaded and activated.
 Proceed to Stage 2 to enable hardened TCP/IP settings.
 
 ```bash
-cd Opsec-Kernel-x64
+cd Opsec_Kernel_x64
 chmod +x stage2-hardening.sh
 ./stage2-hardening.sh
 ```
