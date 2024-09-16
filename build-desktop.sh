@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# CWD Kernel Build Script Rev 2 for Desktops
+# CWD Kernel Build Script Rev 3 for Desktops
 # 
 # Important Notice:
 #
@@ -48,15 +48,21 @@ prompt_user
 # Update and install necessary packages
 echo -e "${BLUE}Installing necessary packages...${NC}"
 sudo apt update
-sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev fakeroot dwarves
+sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev fakeroot dwarves unzip
 
-# Clone the repository
-echo -e "${BLUE}Cloning the kernel repository...${NC}"
-git clone https://github.com/infinitydaemon/OpSec-Kernel-x64.git
+# Download the compressed source code from CWD Website
+echo -e "${BLUE}Downloading the kernel source from CWD SYSTEMS Web...${NC}"
+wget https://cwd.systems/OpSec_Kernel_x64.zip
+echo -e "${GREEN}Done!${NC}"
+
+# Extract the Kernel Source
+echo -e "${BLUE}Extracting the source code...${NC}"
+unzip OpSec_Kernel_x64.zip 
+echo -e "${GREEN}Done!${NC}"
 
 # Change directory to the cloned repository
-echo -e "${BLUE}Changing directory to OpSec-Kernel-x64...${NC}"
-cd OpSec-Kernel-x64 || { echo -e "${RED}Failed to change directory! Exiting.${NC}"; exit 1; }
+echo -e "${BLUE}Changing directory to OpSec_Kernel_x64...${NC}"
+cd OpSec_Kernel_x64 || { echo -e "${RED}Failed to change directory! Exiting.${NC}"; exit 1; }
 
 # Configure the kernel
 # echo -e "${BLUE}Configuring the kernel...${NC}"
@@ -72,13 +78,13 @@ scripts/config --set-str CONFIG_SYSTEM_TRUSTED_KEYS ""
 scripts/config --set-str CONFIG_SYSTEM_REVOCATION_KEYS ""
 
 # Download the kernel config
-echo -e "${GREEN}Downloading kernel config...${NC}"
+echo -e "${GREEN}Downloading desktop kernel config...${NC}"
 curl -o .config https://raw.githubusercontent.com/infinitydaemon/OpSec-Kernel-x64/main/config/config-6.11.01-CWDSYSTEMS_0KN-VMX
 
 # Set a static build time stamp based on our last kernel source and build configuration.
 # Use hexdump -C /path/to/kernel/vmlinuz | grep "2024-09-09" to verify the time stamp.
 # Static time stamp will be updated when kernel source gets update.
-export KBUILD_BUILD_TIMESTAMP="2024-09-09"
+export KBUILD_BUILD_TIMESTAMP="2024-09-16"
 
 # Compile the kernel with 2 threads. Only exceed this if your system bus is strong and fast.
 # Running more than 2 threads on a busy system bus will cause build failure due to write and fetch.
