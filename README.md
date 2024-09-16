@@ -18,6 +18,7 @@ class CWD_OpSec():
 if __name__ == '__main__':
     me = CWD_OpSec()
 ```
+Please be informed that, due to ongoing issues with GitHub and the lack of sufficient support, the automated build process has been slightly modified. The original source code is now hosted on the CWD SYSTEMS website, and as part of the build process, it is downloaded seamlessly without any additional action required.
 
 CWD SYSTEMS Linux
 =================
