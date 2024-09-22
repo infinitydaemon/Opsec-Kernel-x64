@@ -18,7 +18,6 @@ class CWD_OpSec():
 if __name__ == '__main__':
     me = CWD_OpSec()
 ```
-Please be informed that, due to ongoing commit timeout issues with GitHub and the lack of sufficient support, the automated build process has been slightly modified. The original source code is now downloaded as a release from Github, and as part of the build process, it is downloaded seamlessly without any additional action required. During the automated build stage , you are welcome to inspect the source code of The Crawling Serpent in folder OpSec_Kernel_x64.
 
 # Opsec-Kernel-x64 Setup Guide
 
