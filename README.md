@@ -30,7 +30,7 @@ This guide provides step-by-step instructions to set up your system using the Op
 
 ## Step-by-Step Setup
 
-### 1. Download and Install Debian or Ubuntu Minimal ISO
+### Download and Install Debian or Ubuntu Minimal ISO
 
 1. Visit the official download pages:
    - [Debian Download](https://www.debian.org/distrib/)
