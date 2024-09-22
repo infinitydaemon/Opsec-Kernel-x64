@@ -52,6 +52,7 @@ sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-
 
 # Download the compressed source code from CWD Website
 echo -e "${BLUE}Downloading the kernel source from Github Web...${NC}"
+# Primary download link. This needs 7z to extract
 # wget https://github.com/infinitydaemon/Opsec-Kernel-x64/releases/download/v6.11.03/Opsec_Kernel_x64.7z
 wget https://cwd.systems/OpSec_Kernel_x64.zip
 echo -e "${GREEN}Done!${NC}"
