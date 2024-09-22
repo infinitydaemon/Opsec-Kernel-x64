@@ -20,6 +20,28 @@ if __name__ == '__main__':
 ```
 Please be informed that, due to ongoing commit timeout issues with GitHub and the lack of sufficient support, the automated build process has been slightly modified. The original source code is now downloaded as a release from Github, and as part of the build process, it is downloaded seamlessly without any additional action required. During the automated build stage , you are welcome to inspect the source code of The Crawling Serpent in folder OpSec_Kernel_x64.
 
+# Opsec-Kernel-x64 Setup Guide
+
+This guide provides step-by-step instructions to set up your system using the Opsec-Kernel-x64 automated scripts. This process automates the installation of server or desktop configurations, requiring no manual configuration.
+
+## Prerequisites
+
+- A VPS or computer where you can install Debian or Ubuntu.
+- Basic knowledge of using the command line.
+
+## Step-by-Step Setup
+
+### 1. Download and Install Debian or Ubuntu Minimal ISO
+
+1. Visit the official download pages:
+   - [Debian Download](https://www.debian.org/distrib/)
+   - [Ubuntu Download](https://ubuntu.com/download)
+2. Download the **minimal ISO** version of your preferred operating system.
+3. Install the ISO on your VPS or computer:
+   - For physical machines, create a bootable USB with the ISO.
+   - For VPS, upload the ISO and follow the provider’s instructions.
+4. Follow the on-screen instructions to complete the installation, choosing a minimal or base installation without additional packages.
+
 CWD SYSTEMS Linux
 =================
 
