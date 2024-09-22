@@ -19,7 +19,7 @@ if __name__ == '__main__':
     me = CWD_OpSec()
 ```
 
-# Opsec-Kernel-x64 Setup Guide
+# Install Guide
 
 This guide provides step-by-step instructions to set up your system using the Opsec-Kernel-x64 automated scripts. This process automates the installation of server or desktop configurations, requiring no manual configuration.
 
