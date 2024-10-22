@@ -150,7 +150,7 @@ In order to build the documentation, use ``make htmldocs`` or
 
 We are dedicated to pushing the boundaries of innovation with our projects. If you appreciate our work and want to support our Research & Development efforts, consider making a donation. Your contributions help us continue our mission and achieve greater milestones.  
 
-### Crypto Donations
+### Crypto Funding
 
 - **Litecoin (LTC)**: `LfrJzpybM8ZRTFcd8HYfH4NXFtPKpr5Dpg`  
 - **Bitcoin (BTC)**: `13zp3jdZ5utX5vmZaZiDyJtam8daS4uBpC`  
