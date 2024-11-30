@@ -5,7 +5,7 @@ echo "=== ZerOS Automated build and setup for hosted VPS ==="
 
 # Run build-server.sh to download and build The Crawling Serpent Kernel
 echo "Running build-server.sh: Building and installing The Crawling Serpent Kernel..."
-echo "Please do not reboot after this build stage is completed. It is safe to reboot after completion of all stages"
+echo -e "\033[31mPlease do not reboot after this build stage is completed. It is safe to reboot after completion of all stages\033[0m"
 sleep 5
 ./build-server.sh
 
