@@ -47,6 +47,14 @@ CWD SYSTEMS Linux
 Linux Kernel that was tuned and built as Brooklyn Supreme is now OpSec Kernel used in CWD & 0KN Appliances. Numerous optimizations and tweaks have been applied for high availability and network wide security on a packaged build which is shipped on CWD and 0KN appliances. Each appliance has its own different kernel and NOT a generic OpSec release due to the fact that each appliance has a different purpose. The build instructions vary when compared to official kernel.org build instructions. Follow the steps to build the OpSec Kernel for your machine on Debian based distros.
 
 ```bash
+Easy Install
+
+git clone https://github.com/infinitydaemon/Opsec-Kernel-x64.git
+chmod +x automate.sh
+sudo ./automate.sh
+```
+
+```bash
 For Desktop Environments
 
 wget https://raw.githubusercontent.com/infinitydaemon/OpSec-Kernel-x64/main/build-desktop.sh
