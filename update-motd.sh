@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# This script must be run after update-issue.sh script
 # Variables
 MOTD_FILE="/etc/motd"
 GITHUB_URL="https://raw.githubusercontent.com/infinitydaemon/Opsec-Kernel-x64/refs/heads/main/config/motd"
