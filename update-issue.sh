@@ -76,4 +76,4 @@ echo "Updating system configurations..."
 sudo update-grub >/dev/null 2>&1 || echo "GRUB update skipped."
 
 echo "Branding completed successfully for $BRAND_NAME!"
-echo "Please reboot the server to apply all changes."
+echo "Please logout or reboot the server to apply all changes."
