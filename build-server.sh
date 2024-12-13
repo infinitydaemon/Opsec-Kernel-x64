@@ -81,7 +81,7 @@ scripts/config --set-str CONFIG_SYSTEM_REVOCATION_KEYS ""
 
 # Download the kernel config
 echo -e "${GREEN}Downloading kernel config...${NC}"
-curl -o .config https://raw.githubusercontent.com/infinitydaemon/Opsec-Kernel-x64/refs/heads/main/config/config-6.11.03-dg0-Server
+curl -o .config https://raw.githubusercontent.com/infinitydaemon/Opsec-Kernel-x64/refs/heads/main/config/config-6.11.03-TCS-dg0-Server
 
 # Set a static build time stamp based on our last kernel source and build configuration.
 # Use hexdump -C /path/to/kernel/vmlinuz | grep "2024-09-09" to verify the time stamp.
