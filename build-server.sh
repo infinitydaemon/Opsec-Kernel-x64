@@ -58,7 +58,7 @@ echo -e "${GREEN}Done!${NC}"
 
 # Extract the Kernel Source
 echo -e "${BLUE}Extracting the source code...${NC}"
-unzip OpSec_Kernel_x64.zip 
+tar -zxvf OpSec_Kernel_x64.tar.gz
 echo -e "${GREEN}Done!${NC}"
 
 # Change directory to the cloned repository
