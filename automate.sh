@@ -1,5 +1,5 @@
 #!/bin/bash
-
+chmod +x *.sh
 # Label for the automation process
 echo "=== ZerOS Automated build and setup for hosted VPS ==="
 
