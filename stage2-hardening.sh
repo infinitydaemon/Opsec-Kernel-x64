@@ -14,9 +14,10 @@ kernel.shmall = 4194304
 kernel.core_uses_pid = 1
 kernel.msgmnb = 65536
 kernel.msgmax = 65536
-vm.overcommit_memory=1
+# vm.overcommit not actually part of hardening but needed for REDIS
 # sudo apt install hugepages 
 # add sudo hugeadm --thp-never in your .bashrc
+vm.overcommit_memory=1
 vm.swappiness = 20
 vm.dirty_ratio = 80
 vm.dirty_background_ratio = 5
