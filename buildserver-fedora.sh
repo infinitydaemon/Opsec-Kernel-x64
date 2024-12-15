@@ -93,9 +93,10 @@ export KBUILD_BUILD_TIMESTAMP="2024-12-15"
 # Compile the kernel with 2 threads. Only exceed this if your system bus is strong and fast.
 # Running more than 2 threads on a busy system bus will cause build failure due to write and fetch.
 # Adjust the number of threads to meet your specs if you are building on a VPS
-echo -e "${RED}Compiling the kernel...${NC}"
-yes '' | fakeroot make -j2
-
+echo -e "${RED}Building the kernel...${NC}"
+yes '' | make bzImage && make modules
+echo -e "${RED}Building the modules...${NC}"
+yes '' | make modules
 # Install the kernel modules and kernel
 echo -e "${RED}Installing kernel modules...${NC}"
 sudo make modules_install
