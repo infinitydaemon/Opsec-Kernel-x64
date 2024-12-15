@@ -1,49 +1,123 @@
 #!/bin/bash
-chmod +x *.sh
-# Label for the automation process
-echo "=== ZerOS Automated build and setup for hosted VPS ==="
+# Install Dialog dependency first
+sudo apt install dialog
+# Function to detect Linux distribution
+detect_distribution() {
+    if [ -f /etc/os-release ]; then
+        . /etc/os-release
+        DISTRO=$ID
+    else
+        DISTRO="unknown"
+    fi
+}
 
-# Run build-server.sh to download and build The Crawling Serpent Kernel
-echo "Running build-server.sh: Building and installing The Crawling Serpent Kernel..."
-echo -e "\033[31mPlease do not reboot after this build stage is completed. It is safe to reboot after completion of all stages\033[0m"
-sleep 5
-./build-server.sh
+# Function to show a message with the detected distribution. This function will change once other distribtuons such as Fedora, Gentoo or Slackware get supported.
+# At current, its Debian and Ubuntu distributions.
+show_distribution() {
+    dialog --title "CWD SYSTEMS Automated Build System" \
+           --msgbox "Detected Linux Distribution: $PRETTY_NAME" 10 50
+}
 
-# Check for errors in the previous step
-if [ $? -ne 0 ]; then
-    echo "Error in build-server.sh. Exiting..."
-    exit 1
-fi
+# Function to run the build-server.sh script
+run_build_server() {
+    clear
+    dialog --title "CWD SYSTEMS Automated Build System" \
+           --infobox "Building and installing The Crawling Serpent Kernel...\nPlease do not reboot after this stage.\nIt is safe to reboot after completion of all stages." 10 50
+    sleep 3
+    ./build-server.sh
+    if [ $? -ne 0 ]; then
+        dialog --title "CWD SYSTEMS Automated Build System" \
+               --msgbox "Error in build-server.sh. Exiting..." 10 50
+        exit 1
+    fi
+}
 
-# Run stage2-hardening.sh to harden the TCP/IP stack and apply security settings
-echo "Running stage2-hardening.sh: Hardening TCP/IP stack and applying security settings..."
-./stage2-hardening.sh
+# Function to run the stage2-hardening.sh script
+run_stage2_hardening() {
+    clear
+    dialog --title "CWD SYSTEMS Automated Build System" \
+           --infobox "Hardening TCP/IP stack and applying security settings..." 10 50
+    sleep 2
+    ./stage2-hardening.sh
+    if [ $? -ne 0 ]; then
+        dialog --title "CWD SYSTEMS Automated Build System" \
+               --msgbox "Error in stage2-hardening.sh. Exiting..." 10 50
+        exit 1
+    fi
+}
 
-# Check for errors in the previous step
-if [ $? -ne 0 ]; then
-    echo "Error in stage2-hardening.sh. Exiting..."
-    exit 1
-fi
+# Function to run the update-issue.sh script
+run_update_issue() {
+    clear
+    dialog --title "CWD SYSTEMS Automated Build System" \
+           --infobox "Enabling ZerOS branding and updating files..." 10 50
+    sleep 2
+    ./update-issue.sh
+    if [ $? -ne 0 ]; then
+        dialog --title "CWD SYSTEMS Automated Build System" \
+               --msgbox "Error in update-issue.sh. Exiting..." 10 50
+        exit 1
+    fi
+}
 
-# Run update-issue.sh to enable ZerOS branding and update files
-echo "Running update-issue.sh: Enabling ZerOS branding and updating files..."
-./update-issue.sh
+# Function to run the update-motd.sh script
+run_update_motd() {
+    clear
+    dialog --title "CWD SYSTEMS Automated Build System" \
+           --infobox "Updating motd file..." 10 50
+    sleep 2
+    ./update-motd.sh
+    if [ $? -ne 0 ]; then
+        dialog --title "CWD SYSTEMS Automated Build System" \
+               --msgbox "Error in update-motd.sh. Exiting..." 10 50
+        exit 1
+    fi
+}
 
-# Check for errors in the previous step
-if [ $? -ne 0 ]; then
-    echo "Error in update-issue.sh. Exiting..."
-    exit 1
-fi
+# Detect distribution
+detect_distribution
 
-# Run update-motd.sh to update the motd file
-echo "Running update-motd.sh: Updating motd file..."
-./update-motd.sh
+# Main menu
+while true; do
+    clear
+    CHOICE=$(dialog --clear \
+                    --title "CWD SYSTEMS Automated Build System" \
+                    --backtitle "ZerOS Automated Build" \
+                    --menu "Choose a step to run:" 20 60 6 \
+                    1 "Show detected Linux distribution ($PRETTY_NAME)" \
+                    2 "Build and install The Crawling Serpent Kernel" \
+                    3 "Harden TCP/IP stack and apply security settings" \
+                    4 "Enable ZerOS branding and update files" \
+                    5 "Update motd file" \
+                    6 "Exit" 3>&1 1>&2 2>&3)
+    
+    case $CHOICE in
+        1)
+            show_distribution
+            ;;
+        2)
+            run_build_server
+            ;;
+        3)
+            run_stage2_hardening
+            ;;
+        4)
+            run_update_issue
+            ;;
+        5)
+            run_update_motd
+            ;;
+        6)
+            clear
+            dialog --title "CWD SYSTEMS Automated Build System" \
+                   --msgbox "Thank you for using CWD Automated build script!" 10 50
+            break
+            ;;
+        *)
+            dialog --title "CWD SYSTEMS Automated Build System" \
+                   --msgbox "Invalid option. Please try again." 10 50
+            ;;
+    esac
+done
 
-# Check for errors in the previous step
-if [ $? -ne 0 ]; then
-    echo "Error in update-motd.sh. Exiting..."
-    exit 1
-fi
-
-# Completion message
-echo "=== ZerOS Automated build and setup completed successfully ==="
+clear
