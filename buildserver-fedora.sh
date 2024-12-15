@@ -51,7 +51,7 @@ prompt_user
 # Update and install necessary packages
 echo -e "${BLUE}Installing necessary packages...${NC}"
 sudo dnf update -y
-sudo dnf install -y gcc make ncurses-devel bison flex openssl-devel elfutils-libelf-devel fakeroot wget curl
+sudo dnf install -y gcc make ncurses-devel bison flex openssl-devel elfutils-libelf-devel fakeroot wget curl lzma
 
 # Download the compressed source code from CWD Website
 echo -e "${BLUE}Downloading the kernel source from Github Web...${NC}"
