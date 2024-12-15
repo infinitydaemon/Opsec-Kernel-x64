@@ -1,6 +1,7 @@
 #!/bin/bash
 # Install Dialog dependency first
 sudo apt install dialog
+chmod +x *.sh
 # Function to detect Linux distribution
 detect_distribution() {
     if [ -f /etc/os-release ]; then
