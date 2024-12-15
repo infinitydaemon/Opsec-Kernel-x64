@@ -1,6 +1,7 @@
 // A simple C program for CWD Automated Builds
 // Controbutions are welcome :)
 // Build as gcc -o automate automate.c -lncurses
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
