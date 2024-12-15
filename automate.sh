@@ -1,7 +1,7 @@
 #!/bin/bash
+chmod +x *.sh
 # Install Dialog dependency first
 sudo apt install dialog
-chmod +x *.sh
 # Function to detect Linux distribution
 detect_distribution() {
     if [ -f /etc/os-release ]; then
@@ -39,7 +39,7 @@ run_stage2_hardening() {
     dialog --title "CWD SYSTEMS Automated Build System" \
            --infobox "Hardening TCP/IP stack and applying security settings..." 10 50
     sleep 2
-    ./stage2-hardening.sh
+    sudo ./stage2-hardening.sh
     if [ $? -ne 0 ]; then
         dialog --title "CWD SYSTEMS Automated Build System" \
                --msgbox "Error in stage2-hardening.sh. Exiting..." 10 50
@@ -53,7 +53,7 @@ run_update_issue() {
     dialog --title "CWD SYSTEMS Automated Build System" \
            --infobox "Enabling ZerOS branding and updating files..." 10 50
     sleep 2
-    ./update-issue.sh
+    sudo ./update-issue.sh
     if [ $? -ne 0 ]; then
         dialog --title "CWD SYSTEMS Automated Build System" \
                --msgbox "Error in update-issue.sh. Exiting..." 10 50
@@ -67,7 +67,7 @@ run_update_motd() {
     dialog --title "CWD SYSTEMS Automated Build System" \
            --infobox "Updating motd file..." 10 50
     sleep 2
-    ./update-motd.sh
+    sudo ./update-motd.sh
     if [ $? -ne 0 ]; then
         dialog --title "CWD SYSTEMS Automated Build System" \
                --msgbox "Error in update-motd.sh. Exiting..." 10 50
