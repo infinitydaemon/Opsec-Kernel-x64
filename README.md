@@ -50,6 +50,7 @@ Linux Kernel that was tuned and built as Brooklyn Supreme is now OpSec Kernel us
 Easy Automated Install
 
 git clone https://github.com/infinitydaemon/Opsec-Kernel-x64.git
+Opsec-Kernel-x64
 chmod +x automate.sh
 sudo ./automate.sh
 ```
