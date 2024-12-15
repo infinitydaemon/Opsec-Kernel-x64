@@ -2,6 +2,9 @@
 
 # CWD Kernel Build Script Rev 3 for Fedora based distributions.
 # 
+# NOTE!!!!!!!
+# This script is a work in progress as of 15th December, 2024 and the status will change once fully tested and stable.
+#
 # Important Notice:
 #
 # 1. Use at Your Own Risk:
