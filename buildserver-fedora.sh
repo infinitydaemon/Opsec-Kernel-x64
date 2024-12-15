@@ -96,7 +96,7 @@ export KBUILD_BUILD_TIMESTAMP="2024-12-15"
 # Running more than 2 threads on a busy system bus will cause build failure due to write and fetch.
 # Adjust the number of threads to meet your specs if you are building on a VPS
 echo -e "${RED}Building the kernel...${NC}"
-yes '' | make bzImage && make modules
+yes '' | make bzImage
 echo -e "${RED}Building the modules...${NC}"
 yes '' | make modules
 # Install the kernel modules and kernel
