@@ -85,7 +85,7 @@ curl -o .config https://raw.githubusercontent.com/infinitydaemon/Opsec-Kernel-x6
 # Set a static build time stamp based on our last kernel source and build configuration.
 # Use hexdump -C /path/to/kernel/vmlinuz | grep "2024-09-09" to verify the time stamp.
 # Static time stamp will be updated when kernel source gets update.
-export KBUILD_BUILD_TIMESTAMP="2024-12-13"
+export KBUILD_BUILD_TIMESTAMP="2025-01-10"
 
 # Compile the kernel with 2 threads. Only exceed this if your system bus is strong and fast.
 # Running more than 2 threads on a busy system bus will cause build failure due to write and fetch.
