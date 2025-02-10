@@ -1,38 +1,57 @@
-Disclaimer: The Crawling Serpent for ZKN
+********************************************************************************
+*                          Welcome to zerOS                                    *
+*         Custom GNU/Linux 6.10.11 - The Crawling Serpent VMX Kernel           *
+********************************************************************************
 
-===============================================================================================================
-CWD SYSTEMS, the developer of the The Crawling Serpent, hereby declares that any modifications or edits
-made to the current release by a third party are not guaranteed or endorsed by CWD SYSTEMS. Users are
-advised that any alterations to the original kernel release may impact its performance, stability, and security.
-CWD SYSTEMS assumes no responsibility for the consequences arising from any modifications or edits made by
-third parties to the CWDSYSTEMS Kernel. Users who choose to customize or alter the kernel do so at their
-own risk, and CWD SYSTEMS disclaims any liability for potential issues, damages, or data loss resulting from
-such modifications. It is strongly recommended to use the CWD Kernel in its original, unmodified
-state to ensure a reliable and secure computing experience. Any changes made to the kernel by third parties
-are beyond the control and support of CWD SYSTEMS. By using the pre-loaded CWD Kernel, users acknowledge and
-accept the terms of this disclaimer. CWD SYSTEMS reserves the right to update, modify, or terminate support
-for any altered versions of the kernel released by third parties.
+This system runs a custom Linux kernel. By using this software, you agree that:
+- The developers and maintainers are not responsible for data loss or damages.
+- No guarantees are provided regarding performance, security, or stability.
+- Any modifications to the kernel are not supported and may cause issues.
+- This system is provided as-is, without warranties or guarantees.
 
-                         __
-           ---_ ...... _/_ -
-          /  .      ./ .'*\ \
-          : '         /__-'   \.
-         /                      )
-       _/                  >   .'
-     /   '   .       _.-" /  .'
-     \           __/"     /.'
-       \ '--  .-" /     //'
-        \|  \ | /     //
-             \:     //
-          `\/     //
-           \__`\/ /  CWD
-               \_|
+CWD SYSTEMS, developer of The Crawling Serpent, does not guarantee or endorse
+third-party modifications to its custom kernel. Alterations may impact
+performance, stability, and security. Users modifying the kernel do so at their
+own risk, and CWD SYSTEMS assumes no liability for resulting issues, damages,
+or data loss. CWD SYSTEMS reserves the right to modify or terminate support for
+altered versions. By using this kernel, users accept these terms.
 
 
-Linux 6.12.01 dg0 The Crawling Serpent 
-Web: https://cwd.systems | https://zknet.io
-Telegram: @cwdsystems
-Email: cwdsystems@protonmail.ch
+                                    QMMQ                      
+                                 QMWWNNWNMQ                      
+                             QWWWNWBAqq&BWDDBMQ                  
+                         QWWWWWW&Soi'  'iJBBWDDDBMQ              
+                     QMBWWWWAqe)'        <WWDO$BWHDDBMQ          
+                 QMBWWWBAme>'            )S7i-mBKHBNMWWWBWQ      
+             QWBHKHHk6t>_     'iom"         +IbBBD84T7SADHKHBMQ  
+           HKKKDD$J>.     :iomAWN&"      ^yGHN84#{=    `vw@DDKKDB
+           OEgGAU$AdJ*"iomkKB$qe>`       vKE#s=      +{Thk$$8OYA@
+           khSggg4G&HD$KBDHKD2  /I:      -=      +{J48DH$AYbbGPY@
+           OVh6[Cmggh4ZA$KK@KEfP$D|         .+{J48HH$AYbbGdf[4GY@
+           Od4w  ,vtfqSqg4GAUKDH@@v     ./*JE8HH$AYGPG43t)'  gbY@
+           Ad4w      ;FVgSqSh4GOU@8dTr{J48HH$AYbZPGZY6:      hbY@
+           A4Ew       f4hg45wmggh4G&KKKKUOYbbbg55YZbky      .VZY@
+           OdEC       y4dhX? ^xeyqS6mXkPPGX6zc^ lAZbky      .dZb@
+           OdEJ       2gE4G[    .=}dFhZPko=     sYGbAf      .VGb$
+           O4EJ       z5fCfv      ;4pdbPO%      -/"\>/      .dZb$
+           k4gJ                   ^4pVbPkx                  `dGb$
+           kdEJ                   ,4pVbPk%       `.         `dPZU
+           Yh4#       =\>ic=   _}onhFhGXYi      {dmpp]       dXG8
+           bhgq[):    f44dG!    :\[g5gGEb)      ]kZbkT    ,veggG&
+           84gSVVmJ[i,yghgE!      ,h2SP4b>      [ZXPGn:vtydGG4gZK
+             QAPdhShgFgqgS4I      ^hyqXVG<      [PEgEdSgXEXPY$Q  
+                 QAghS6mm6q#v;    ^SCp4gX)    ;ifdd4dV4XY$Q      
+                     QAEh625p2T[v^+mn5hm4),i1CmVhSdgZ8Q          
+                         Qk4m5yy3w#3L3SFSy5SSqgdP@Q              
+                             QkhFf#uzw625FmgXAQ                  
+                                 QbSw5SmE&Q                      
+                                    QbEQ                      
 
-Team ZKN & CWD SYSTEMS
-=============================================================================================================
+
+ * Maintained by Team ZKN & CWD SYSTEMS
+ * ZKN:          https://zknet.io
+ * CWD Systems:  https://cwd.systems
+
+GNU/Linux 6.10.11 The Crawling Serpent VMX
+
+********************************************************************************
