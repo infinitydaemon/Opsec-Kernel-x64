@@ -2,6 +2,8 @@
 # Automatically generated file; DO NOT EDIT.
 # Linux/x86 6.12.01-dg0 Kernel Configuration
 #
+# Note to self! Need to port The Bleeding Dragon for x64 now to keep up with ARM64 port.
+#
 CONFIG_CC_VERSION_TEXT="gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=130300
