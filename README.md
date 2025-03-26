@@ -5,7 +5,7 @@ class CWD_OpSec():
     
   def __init__(self):
     self.name = "cwd";
-    self.current.release = "The Crawling Serpent for x86/64";
+    self.current.release = "The Crawling Serpent for x64";
     self.username = "cwdsystems";
     self.location = "KyrgzRepublic";
     self.protonmail = "@cwdsystems";
@@ -44,7 +44,7 @@ This guide provides step-by-step instructions to set up your system using the Op
 CWD SYSTEMS Linux
 =================
 
-Linux Kernel that was tuned and built as Brooklyn Supreme is now OpSec Kernel used in CWD & 0KN Appliances. Numerous optimizations and tweaks have been applied for high availability and network wide security on a packaged build which is shipped on CWD and 0KN appliances. Each appliance has its own different kernel and NOT a generic OpSec release due to the fact that each appliance has a different purpose. The build instructions vary when compared to official kernel.org build instructions. Follow the steps to build the OpSec Kernel for your machine on Debian based distros.
+This Kernel is a custom-built, highly secure kernel developed by CWD SYSTEMS, designed to provide advanced protection against modern cyber threats. Utilizing cutting-edge techniques in cybersecurity, it offers unmatched resilience with features such as real-time threat monitoring, kernel hardening, and low-level attack prevention. Its architecture is optimized for high-speed performance and stealthy operations, making it ideal for sensitive environments like blockchain nodes, data centre solutions, and secure communication platforms. By integrating CWD Gate for encrypted tunnel endpoints, it ensures unparalleled data security and anonymity in today's increasingly hostile digital landscape.
 
 ```bash
 Easy Automated Install
