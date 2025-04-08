@@ -61,19 +61,6 @@ run_update_issue() {
     fi
 }
 
-# Function to run the update-motd.sh script
-run_update_motd() {
-    clear
-    dialog --title "CWD SYSTEMS Automated Build System" \
-           --infobox "Updating motd file..." 10 50
-    sleep 2
-    sudo ./update-motd.sh
-    if [ $? -ne 0 ]; then
-        dialog --title "CWD SYSTEMS Automated Build System" \
-               --msgbox "Error in update-motd.sh. Exiting..." 10 50
-        exit 1
-    fi
-}
 
 # Detect distribution
 detect_distribution
@@ -89,7 +76,6 @@ while true; do
                     2 "Build and install The Crawling Serpent Kernel" \
                     3 "Harden TCP/IP stack and apply security settings" \
                     4 "Enable ZerOS branding and update files" \
-                    5 "Update motd file" \
                     6 "Exit" 3>&1 1>&2 2>&3)
     
     case $CHOICE in
