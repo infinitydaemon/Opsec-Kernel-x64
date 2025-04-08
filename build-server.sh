@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# CWD Kernel Build Script Rev 3
+# CWD Kernel Build Script Rev 4
 # 
 # Important Notice:
 #
@@ -53,7 +53,7 @@ sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-
 # Download the compressed source code from CWD Website
 echo -e "${BLUE}Downloading the kernel source from Github Web...${NC}"
 # Primary download link. 
-wget https://github.com/infinitydaemon/Opsec-Kernel-x64/releases/download/6.12.01/OpSec_Kernel_x64.tar.gz
+wget https://github.com/infinitydaemon/Opsec-Kernel-x64/releases/download/6.14.1/TheBleedingDragon.tar.gz
 echo -e "${GREEN}Done!${NC}"
 
 # Extract the Kernel Source
