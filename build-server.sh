@@ -100,11 +100,11 @@ echo -e "${RED}Installing the kernel...${NC}"
 sudo make install
 
 # Prompt for reboot
-echo -e "${YELLOW}Do you want to reboot the system to activate The Crawling Serpent for 0KN Server? (yes/no)${NC}"
+echo -e "${YELLOW}Do you want to reboot the system to activate The Bleeding Dragon for Server? (yes/no)${NC}"
 read -r reboot_response
 if [[ "$reboot_response" == "yes" ]]; then
     echo -e "${GREEN}Rebooting the system...${NC}"
     sudo reboot
 else
-    echo -e "${GREEN}You can reboot the system later to activate The Crawling Serpent.${NC}"
+    echo -e "${GREEN}You can reboot the system later to activate The Bleeding Dragon.${NC}"
 fi
