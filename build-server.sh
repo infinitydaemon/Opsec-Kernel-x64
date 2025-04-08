@@ -48,7 +48,7 @@ prompt_user
 # Update and install necessary packages
 echo -e "${BLUE}Installing necessary packages...${NC}"
 sudo apt update
-sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev fakeroot dwarves unzip curl wget grep
+sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev fakeroot dwarves unzip curl wget grep bc
 
 # Download the compressed source code from CWD Website
 echo -e "${BLUE}Downloading the kernel source from Github Web...${NC}"
@@ -71,16 +71,16 @@ cd OpSec_Kernel_x64 || { echo -e "${RED}Failed to change directory! Exiting.${NC
 #
 # This step is only required if a new kernel configuration needs to be generated. 
 
+# Download the kernel config
+echo -e "${GREEN}Downloading kernel config...${NC}"
+curl -o .config https://raw.githubusercontent.com/infinitydaemon/Opsec-Kernel-x64/refs/heads/main/config/config-6.12.01-TCS-dg0-Server
+
 # Disable SYSTEM_TRUSTED_KEYS and SYSTEM_REVOCATION_KEYS
 echo -e "${BLUE}Disabling SYSTEM_TRUSTED_KEYS and SYSTEM_REVOCATION_KEYS...${NC}"
 scripts/config --disable SYSTEM_TRUSTED_KEYS
 scripts/config --disable SYSTEM_REVOCATION_KEYS
 scripts/config --set-str CONFIG_SYSTEM_TRUSTED_KEYS ""
 scripts/config --set-str CONFIG_SYSTEM_REVOCATION_KEYS ""
-
-# Download the kernel config
-echo -e "${GREEN}Downloading kernel config...${NC}"
-curl -o .config https://raw.githubusercontent.com/infinitydaemon/Opsec-Kernel-x64/refs/heads/main/config/config-6.12.01-TCS-dg0-Server
 
 # Set a static build time stamp based on our last kernel source and build configuration.
 # Use hexdump -C /path/to/kernel/vmlinuz | grep "2024-09-09" to verify the time stamp.
