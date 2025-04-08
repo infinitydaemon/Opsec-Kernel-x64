@@ -73,7 +73,7 @@ cd OpSec_Kernel_x64 || { echo -e "${RED}Failed to change directory! Exiting.${NC
 
 # Download the kernel config
 echo -e "${GREEN}Downloading kernel config...${NC}"
-curl -o .config https://raw.githubusercontent.com/infinitydaemon/Opsec-Kernel-x64/refs/heads/main/config/config-6.12.01-TCS-dg0-Server
+curl -o .config https://raw.githubusercontent.com/infinitydaemon/Opsec-Kernel-x64/refs/heads/main/config/config-6.14.1-TBD-dg0-Server
 
 # Disable SYSTEM_TRUSTED_KEYS and SYSTEM_REVOCATION_KEYS
 echo -e "${BLUE}Disabling SYSTEM_TRUSTED_KEYS and SYSTEM_REVOCATION_KEYS...${NC}"
@@ -85,13 +85,13 @@ scripts/config --set-str CONFIG_SYSTEM_REVOCATION_KEYS ""
 # Set a static build time stamp based on our last kernel source and build configuration.
 # Use hexdump -C /path/to/kernel/vmlinuz | grep "2024-09-09" to verify the time stamp.
 # Static time stamp will be updated when kernel source gets update.
-export KBUILD_BUILD_TIMESTAMP="2025-01-10"
+export KBUILD_BUILD_TIMESTAMP="2025-04-08"
 
 # Compile the kernel with 2 threads. Only exceed this if your system bus is strong and fast.
 # Running more than 2 threads on a busy system bus will cause build failure due to write and fetch.
 # Adjust the number of threads to meet your specs if you are building on a VPS
 echo -e "${RED}Compiling the kernel...${NC}"
-yes '' | fakeroot make -j2
+yes '' | fakeroot make -j4
 
 # Install the kernel modules and kernel
 echo -e "${RED}Installing kernel modules...${NC}"
