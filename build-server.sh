@@ -48,7 +48,7 @@ prompt_user
 # Update and install necessary packages
 echo -e "${BLUE}Installing necessary packages...${NC}"
 sudo apt update
-sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev fakeroot dwarves unzip curl wget grep
+sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev fakeroot dwarves unzip curl wget grep bc
 
 # Download the compressed source code from CWD Website
 echo -e "${BLUE}Downloading the kernel source from Github Web...${NC}"
