@@ -58,12 +58,12 @@ echo -e "${GREEN}Done!${NC}"
 
 # Extract the Kernel Source
 echo -e "${BLUE}Extracting the source code...${NC}"
-tar -zxvf OpSec_Kernel_x64.tar.gz
+tar -zxvf TheBleedingDragon.tar.gz
 echo -e "${GREEN}Done!${NC}"
 
 # Change directory to the cloned repository
-echo -e "${BLUE}Changing directory to OpSec_Kernel_x64...${NC}"
-cd OpSec_Kernel_x64 || { echo -e "${RED}Failed to change directory! Exiting.${NC}"; exit 1; }
+echo -e "${BLUE}Changing directory to TheBleedingDragon...${NC}"
+cd TheBleedingDragon || { echo -e "${RED}Failed to change directory! Exiting.${NC}"; exit 1; }
 
 # Configure the kernel
 # echo -e "${BLUE}Configuring the kernel...${NC}"
